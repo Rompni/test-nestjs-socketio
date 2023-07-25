@@ -30,8 +30,7 @@ export class SocketsGateway
   public server: Server;
 
   handleConnection(@ConnectedSocket() client: any) {
-    // console.log(
-    //   `user ${client.user.id} with socket ${client.id} connected with device ${client.handshake?.query?.deviceId}`,
+       console.log(`socket ${client.id} CONNECTED`);
     // );
 
     // client.join(
@@ -43,6 +42,7 @@ export class SocketsGateway
   }
 
   handleDisconnect(@ConnectedSocket() client: any) {
+    console.log(`socket ${client.id} DISCONNECTED`);
     // console.log(
     //   `user ${client.user.id} with socket ${client.id} with device ${client.handshake?.query?.deviceId} DISCONNECTED`,
     // );
